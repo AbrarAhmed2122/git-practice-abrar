@@ -10,7 +10,7 @@
 
 #Updated
 from datetime import date
-from utils import add, subtract, multiply
+from utils import add, subtract, multiply, divide
 
 print("Name: Your Full Name")
 print("Today's Date:", date.today())
@@ -22,9 +22,13 @@ try:
     print("Addition:", add(a, b))
     print("Subtraction:", subtract(a, b))
     print("Multiplication:", multiply(a, b))
+    print("Division:", divide(a, b))
 
 except ValueError:
     print("Error: Please enter valid numbers.")
 
 except TypeError as error:
+    print("Error:", error)
+
+except ZeroDivisionError as error:
     print("Error:", error)
